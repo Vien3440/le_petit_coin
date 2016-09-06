@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html> 
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ asset ('bundles/framework/css/lpcnav.css') }}">
+    {% endblock %}
+    {% block body %}        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand titlesite"  href="#">Le Ptit Coin</a>
+                </div>
+                <div class="nav navbar-nav" id="stylenav">
+                    <div>
+                        <label class="filter-col stylett" style="margin-right:0;" for="pref-perpage">Categorie</label>
+                        <select id="pref-perpage" class="form-control">
+                            <option value="2">Immobilier</option>
+                            <option value="3">Multimedia</option>
+                            <option value="4">Maison</option>
+                            <option value="5">Loisirs</option>
+                            <option value="6">Services</option>
+                        </select>                                
+                    </div> 
+                    <div>
+                        <label class="filter-col stylett" style="margin-right:0;" for="pref-perpage">Localité</label>
+                        <select id="pref-perpage" class="form-control">
+                            <option value="2">departement 34</option>
+                            <option value="3">departement 30</option>
+                            <option value="4">departement 11</option>
+                            <option value="5">departement 13</option>
+                            <option value="6">departement 83</option>
+                        </select>   
+                        
+                    </div>
+
+
+                    <div>
+                        <label class="stylett" for="usr">Recherche</label>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    
+                    <div class="active recherche"><a href="#">Recherche</a></div>
+
+                    <a href="#">Ajout</a>
+                </div>
+            </div>
+        </nav>
+    {% endblock %}
+
+
+</html>

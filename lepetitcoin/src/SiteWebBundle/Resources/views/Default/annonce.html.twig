@@ -1,0 +1,22 @@
+{%extends "template.html.twig"%}
+
+{% block head %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset ('bundles/framework/css/styleAnnonce.css')}}">
+{% endblock %}
+
+{% block body %}{{parent()}}
+    {% for annonce in poste %}
+        <div id="styleAnnonce">
+            <p>{{annonce.titre}}</p>
+            <p>{{annonce.image}}</p>
+            <p>{{annonce.description}}</p>
+            <p>{{annonce.prix}}</p>
+            <p>{{annonce.vendeur}}</p>
+            <p>{{annonce.tel}}</p>
+            <p>{{annonce.categorie}}</p>
+            <p>{{annonce.localite}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{%extends "template.html.twig"%}
+{% block head %}{{parent()}}{% endblock %}
+
+{% block body %}{{parent()}}
+
+    {{form_start(formNews,{'attr':{'action':path('valid')}})}}
+    {# ici on afiche tous les champs qui restent a afficher #}
+    {{form_rest(formNews)}}
+    {# en gros on ferme la balise form #}
+    {{form_end(formNews)}}
+{% endblock %}
